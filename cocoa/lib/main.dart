@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'home1.dart';
 import 'home2.dart';
 import 'home3.dart';
+import 'home4.dart';
+import 'home5.dart';
 
 void main() => runApp(MyApp());
 
@@ -57,6 +59,20 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => HomePage3()));
+              },
+            ),
+            RaisedButton(
+              child: Text('点击我跳转home4'),
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => HomePage4()));
+              },
+            ),
+            RaisedButton(
+              child: Text('点击我跳转home5'),
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => HomePage5()));
               },
             )
           ],
