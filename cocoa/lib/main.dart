@@ -4,6 +4,7 @@ import 'home2.dart';
 import 'home3.dart';
 import 'home4.dart';
 import 'home5.dart';
+import 'Routes/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: routes,
+      // initialRoute: '/',
+      // onGenerateRoute: onGenerateRoute,
     );
   }
 }
@@ -50,8 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
             RaisedButton(
               child: Text('点击我跳转home2'),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => HomePage2(titles: '我是传过去的标题home2',)));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => HomePage2(
+                          titles: '我是传过去的标题home2',
+                        )));
               },
             ),
             RaisedButton(
@@ -73,6 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => HomePage5()));
+              },
+            ),
+            RaisedButton(
+              child: Text('点击我跳转home6'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/home6');
               },
             )
           ],
