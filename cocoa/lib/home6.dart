@@ -28,7 +28,7 @@ Widget cell(BuildContext context) {
   return InkWell(
     onTap: () {
       print('点击cell');
-      Navigator.pushNamed(context,'/home7',arguments: {'id':"10"});
+      Navigator.pushNamed(context, '/home7', arguments: {'id': "10"});
     },
     child: Column(
       children: <Widget>[
@@ -47,10 +47,14 @@ Widget cell(BuildContext context) {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Container(
-                        child: Text('标题'),
+                        child: Text('标题',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.black)),
                       ),
                       Container(
-                        child: Text('日期'),
+                        child: Text('日期',
+                            style:
+                                TextStyle(fontSize: 16, color: Colors.brown)),
                       )
                     ],
                   ),
