@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cocoa/home6.dart';
 import 'package:cocoa/home7.dart';
 
-final routes = {'/home6':(context)=>HomePage6(),'/home7':(context)=>HomePage7()};
+final routes = {'/home6':(context)=>HomePage6(),'/home7':(context, {arguments})=>HomePage7(arguments: arguments)};
 
 //固定写法
 var onGenerateRoute = (RouteSettings settings) {
